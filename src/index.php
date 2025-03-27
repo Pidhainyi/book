@@ -1,10 +1,5 @@
 <?php
 
-// Test PHP connection
-//phpinfo();
-
-// Test PostgreSQL connection (uncomment when you want to test)
-
 try {
     $host = getenv('POSTGRES_HOST');
     $dbname = getenv('POSTGRES_DB');
