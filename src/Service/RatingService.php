@@ -2,17 +2,13 @@
 
 declare(strict_types=1);
 
-/*
- * Made for YouTube channel https://www.youtube.com/@eazy-dev
- */
-
 namespace App\Service;
 
 use App\Repository\ReviewRepository;
 
-class RatingService
+readonly class RatingService
 {
-    public function __construct(private readonly ReviewRepository $reviewRepository)
+    public function __construct(private ReviewRepository $reviewRepository)
     {
     }
 

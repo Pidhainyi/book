@@ -22,3 +22,15 @@ services:
       - "$PWD/hoverfly:/hoverfly_app:ro"
     ports:
       - "8500:8500"
+
+  php:
+      container_name: php-app
+      build:
+          context: .
+          dockerfile: docker/Dockerfile
+      volumes:
+          - "$PWD:/var/www/html"
+      ports:
+          - "9000:9000"
+      depends_on:
+          - database

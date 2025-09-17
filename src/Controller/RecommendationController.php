@@ -23,7 +23,11 @@ class RecommendationController extends AbstractController
     }
 
     #[Route(path: '/api/v1/book/{id}/recommendations', methods: ['GET'])]
-    #[OA\Response(response: 200, description: 'Returns recommendations for the book', attachables: [new Model(type: RecommendedBookListResponse::class)])]
+    #[OA\Response(
+        response: 200,
+        description: 'Returns recommendations for the book',
+        attachables: [new Model(type: RecommendedBookListResponse::class)]
+    )]
     public function recommendationsByBookId(int $id): Response
     {
         return $this->json($this->recommendationService->getRecommendationsByBookId($id));

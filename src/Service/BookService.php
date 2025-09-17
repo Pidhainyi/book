@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-/*
- * Made for YouTube channel https://www.youtube.com/@eazy-dev
- */
-
 namespace App\Service;
 
 use App\Entity\Book;
@@ -23,8 +19,8 @@ class BookService
         private readonly BookRepository $bookRepository,
         private readonly BookCategoryRepository $bookCategoryRepository,
         private readonly BookChapterService $bookChapterService,
-        private readonly RatingService $ratingService)
-    {
+        private readonly RatingService $ratingService
+    ) {
     }
 
     public function getBooksByCategory(int $categoryId): BookListResponse
@@ -34,7 +30,7 @@ class BookService
         }
 
         return new BookListResponse(array_map(
-            function (Book $book) {
+            static function (Book $book) {
                 $item = new BookListItem();
                 BookMapper::map($book, $item);
 

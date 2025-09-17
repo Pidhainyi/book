@@ -21,6 +21,10 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @method Book[]    findAll()
  * @method Book[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
+
+/**
+ * @extends ServiceEntityRepository<Book>
+ */
 class BookRepository extends ServiceEntityRepository
 {
     use RepositoryModifyTrait;
@@ -65,6 +69,7 @@ class BookRepository extends ServiceEntityRepository
     }
 
     /**
+     * @param int[] $ids
      * @return Book[]
      */
     public function findBooksByIds(array $ids): array

@@ -2,18 +2,14 @@
 
 declare(strict_types=1);
 
-/*
- * Made for YouTube channel https://www.youtube.com/@eazy-dev
- */
-
 namespace App\Model;
 
-class BookCategoryListResponse
+readonly class BookCategoryListResponse
 {
     /**
      * @param BookCategory[] $items
      */
-    public function __construct(private readonly array $items)
+    public function __construct(private array $items)
     {
     }
 

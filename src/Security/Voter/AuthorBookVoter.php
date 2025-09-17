@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-/*
- * Made for YouTube channel https://www.youtube.com/@eazy-dev
- */
 
 namespace App\Security\Voter;
 
@@ -26,7 +23,7 @@ class AuthorBookVoter extends Voter
             return false;
         }
 
-        return intval($subject) > 0;
+        return (int)$subject > 0;
     }
 
     protected function voteOnAttribute(string $attribute, $subject, TokenInterface $token): bool

@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-/*
- * Made for YouTube channel https://www.youtube.com/@eazy-dev
- */
 
 namespace App\Service;
 
@@ -35,8 +32,8 @@ class AuthorBookService
         private readonly BookFormatRepository $bookFormatRepository,
         private readonly BookCategoryRepository $bookCategoryRepository,
         private readonly SluggerInterface $slugger,
-        private readonly UploadService $uploadService)
-    {
+        private readonly UploadService $uploadService
+    ) {
     }
 
     public function uploadCover(int $id, UploadedFile $file): UploadCoverResponse

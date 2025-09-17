@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-/*
- * Made for YouTube channel https://www.youtube.com/@eazy-dev
- */
-
 namespace App\Service;
 
 use App\Entity\Book;
@@ -32,8 +28,8 @@ class AuthorBookChapterService
         private readonly BookRepository $bookRepository,
         private readonly BookChapterRepository $bookChapterRepository,
         private readonly BookChapterService $bookChapterService,
-        private readonly SluggerInterface $slugger)
-    {
+        private readonly SluggerInterface $slugger
+    ) {
     }
 
     public function createChapter(CreateBookChapterRequest $request, int $bookId): IdResponse

@@ -4,6 +4,7 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
+        "php": "^8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "composer/package-versions-deprecated": "1.11.99.4",
@@ -42,6 +43,7 @@
         "friendsofphp/php-cs-fixer": "^3.14",
         "helmich/phpunit-json-assert": "^3.5",
         "ns3777k/hoverfly": "^v2.0",
+        "phpstan/phpstan": "^1.12",
         "phpunit/phpunit": "^9.6",
         "rector/rector": "^0.15.19",
         "symfony/browser-kit": "6.2.*",
@@ -82,6 +84,7 @@
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
+        "phpstan": "php -d memory_limit=512M vendor/bin/phpstan analyse",
         "post-install-cmd": [
             "@auto-scripts"
         ],

@@ -2,10 +2,6 @@
 
 declare(strict_types=1);
 
-/*
- * Made for YouTube channel https://www.youtube.com/@eazy-dev
- */
-
 namespace App\Service;
 
 use App\Entity\Subscriber;
@@ -13,9 +9,9 @@ use App\Exception\SubscriberAlreadyExistsException;
 use App\Model\SubscriberRequest;
 use App\Repository\SubscriberRepository;
 
-class SubscriberService
+readonly class SubscriberService
 {
-    public function __construct(private readonly SubscriberRepository $subscriberRepository)
+    public function __construct(private SubscriberRepository $subscriberRepository)
     {
     }
 
