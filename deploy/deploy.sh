@@ -7,7 +7,7 @@
 PROJECT_NAME="posts"
 PROJECT_DIR="/var/www/html/$PROJECT_NAME"
 GIT_REPO="git@github.com:Pidhainyi/book.git"
-BRANCH="main"
+BRANCH="master"
 PHP_VERSION="8.2"
 
 echo "🚀 Starting deployment for $PROJECT_NAME..."
